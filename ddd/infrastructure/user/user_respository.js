@@ -1,17 +1,19 @@
+const { v4: uuid } = require("uuid");
+
 const get_all = () => {
     return "get_all";
 };
 
-const get_one = () => {
-    return "get_one";
+const get_one = (id) => {
+    return id;
 };
 
-const create_one = () => {
-    return "create_one";
+const create_one = (body) => {
+    return body;
 };
 
-const delete_one = () => {
-    return "delete_one";
+const delete_one = (id) => {
+    return id;
 };
 
 module.exports = {
