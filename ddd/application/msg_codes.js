@@ -1,4 +1,4 @@
-const OK = "OK";
+const OK = 200;
 const FAILED = "FAILED";
 const BAD_REQUEST = 400;
 

@@ -1,6 +1,6 @@
-const { OK, BAD_REQUEST } = require("../msg_codes")
+const { OK } = require("../msg_codes")
 const {
-  get_id, get_body,
+  get_id, get_body, do_nothing,
   serve,
   not_null,
   wrong_id_error_msg, wrong_body_error_msg,
@@ -9,7 +9,7 @@ const {
 const user_respository = require("../../infrastructure/user/user_respository");
 
 const get_all = (req, res) => {
-  res.send({status: OK, data: user_respository.get_all()});
+  serve(req, res, do_nothing, not_null, user_respository.get_all, null);
 };
 
 const get_one = (req, res) => {
